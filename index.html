@@ -255,16 +255,17 @@
 	function playBgMp3(){
 		var mp3List = ['bg1'];
 		var prefix = "mp3/";
-		/*var $audio = $("#bgAudio"), $source = $audio.children("source");
+		var $audio = $("#bgAudio"), $source = $audio.children("source");
 		$source.attr("src", prefix+mp3List[curMp3Index]+".mp3");
+		$audio[0].load();
 		$audio[0].play();
 		$audio[0].onended = function(){
 			curMp3Index++;
 			if (curMp3Index>=mp3List.length) curMp3Index = 0;
 			console.log(curMp3Index, mp3List.length);
 			playBgMp3();
-		}*/
-		var $audio = $("#bgAudio");
+		}
+		/*var $audio = $("#bgAudio");
 		$audio.empty();
 		$audio.append('<source src="mp3/'+mp3List[curMp3Index]+'.mp3?'+(+new Date)+'" type="audio/mpeg"><embed height="100" width="100" src="mp3/'+mp3List[curMp3Index]+'.mp3?'+(+new Date)+'" />');
 		$audio[0].load();
@@ -273,7 +274,7 @@
 			curMp3Index++;
 			if (curMp3Index>=mp3List.length) curMp3Index = 0;
 			playBgMp3();
-		}
+		}*/
 	}
 
 	function drawHeart(a){
