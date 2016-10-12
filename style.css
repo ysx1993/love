@@ -24,14 +24,22 @@ body {
   overflow: hidden;
   font-family: 'Microsoft YaHei', arial, Helvetica;
 }
-.bg {
+.main-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.main-container .bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.bg .slider img {
+.main-container .bg .slider img {
   position: absolute;
   width: auto;
   top: 50%;
@@ -39,28 +47,28 @@ body {
   margin-top: -540px;
   margin-left: -960px;
 }
-.tip-love {
+.main-container .tip-love {
   position: absolute;
   top: 50px;
   left: 100px;
   width: 200px;
 }
-.tip-love img {
+.main-container .tip-love img {
   opacity: 0;
   visibility: hidden;
 }
-.title-love {
+.main-container .title-love {
   position: absolute;
   top: 50%;
   left: 50%;
   margin-left: -293.5px;
   margin-top: -150px;
 }
-.title-love img {
+.main-container .title-love img {
   opacity: 0;
   visibility: hidden;
 }
-.content {
+.main-container .content {
   position: absolute;
   width: 600px;
   height: 700px;
@@ -70,7 +78,7 @@ body {
   margin-top: -350px;
   opacity: 0;
 }
-.content .cursor {
+.main-container .content .cursor {
   position: relative;
   width: 2px;
   height: 18px;
@@ -78,14 +86,14 @@ body {
   display: inline-block;
   background: red;
 }
-#heart {
+.main-container #heart {
   position: absolute;
   top: 50%;
   left: 50%;
   margin-left: -400px;
   margin-top: -300px;
 }
-#snow {
+.main-container #snow {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -94,10 +102,10 @@ body {
   visibility: hidden;
   opacity: 0;
 }
-audio {
+.main-container audio {
   visibility: hidden;
 }
-.btn-left {
+.main-container .btn-left {
   position: absolute;
   top: 45%;
   left: 5%;
@@ -105,7 +113,7 @@ audio {
   opacity: 0;
   visibility: hidden;
 }
-.btn-right {
+.main-container .btn-right {
   position: absolute;
   top: 45%;
   right: 5%;

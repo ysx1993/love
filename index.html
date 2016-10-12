@@ -7,53 +7,57 @@
 </head>
 <body>
 
-<div class="bg">
+<div class="main-container">
+	<div class="bg">
 	<div class="slider">
-	    <ul>
-	        <li class="preload" data-source="img/bg1.jpg"></li>
-	        <li class="preload" data-source="img/bg2.jpg"></li>
-	        <li class="preload" data-source="img/bg3.jpg"></li>
-	        <li class="preload" data-source="img/bg4.jpg"></li>
-	        <li class="preload" data-source="img/bg5.jpg"></li>
-	        <li class="preload" data-source="img/bg6.jpg"></li>
-	        <li class="preload" data-source="img/bg7.jpg"></li>
-	        <li class="preload" data-source="img/bg8.jpg"></li>
-	    </ul>
+		    <ul>
+		        <li class="preload" data-source="img/bg1.jpg"></li>
+		        <li class="preload" data-source="img/bg2.jpg"></li>
+		        <li class="preload" data-source="img/bg3.jpg"></li>
+		        <li class="preload" data-source="img/bg4.jpg"></li>
+		        <li class="preload" data-source="img/bg5.jpg"></li>
+		        <li class="preload" data-source="img/bg6.jpg"></li>
+		        <li class="preload" data-source="img/bg7.jpg"></li>
+		        <li class="preload" data-source="img/bg8.jpg"></li>
+		    </ul>
+		</div>
+	</div>
+
+	<div class="tip-love preload" data-source="img/tip_love.png"></div>
+
+	<div class="content">
+		<span class="text"></span><span class="cursor"></span>	
+	</div>
+
+	<canvas id="heart" width="800" height="600"></canvas>
+
+	<canvas id="snow" width="1920" height="1080"></canvas>
+
+	<div class="title-love preload" data-source="img/title_love.png"></div>
+
+
+	<audio id="bgAudio" controls="controls">
+	  <source src="mp3/bg1.mp3" type="audio/mpeg">
+	  <embed height="100" width="100" src="mp3/bg.mp3" />
+	</audio>
+
+	<audio id="key" controls="controls">
+	  <source src="mp3/key.mp3" type="audio/mpeg">
+	  <embed height="100" width="100" src="mp3/key.mp3" />
+	</audio>
+
+	<div class="btn-left btn-container">
+		<div class="normal preload" data-source="img/btn_left.png"></div>
+		<div class="hover preload" data-source="img/btn_left_hover.png"></div>
+	</div>
+
+	<div class="btn-right btn-container">
+		<div class="normal preload" data-source="img/btn_right.png"></div>
+		<div class="hover preload" data-source="img/btn_right_hover.png"></div>
 	</div>
 </div>
 
-<div class="tip-love preload" data-source="img/tip_love.png"></div>
 
-<div class="content">
-	<span class="text"></span><span class="cursor"></span>	
-</div>
-
-<canvas id="heart" width="800" height="600"></canvas>
-
-<canvas id="snow" width="1920" height="1080"></canvas>
-
-<div class="title-love preload" data-source="img/title_love.png"></div>
-
-
-<audio id="bgAudio" controls="controls">
-  <source src="mp3/bg1.mp3" type="audio/mpeg">
-  <embed height="100" width="100" src="mp3/bg.mp3" />
-</audio>
-
-<audio id="key" controls="controls">
-  <source src="mp3/key.mp3" type="audio/mpeg">
-  <embed height="100" width="100" src="mp3/key.mp3" />
-</audio>
-
-<div class="btn-left btn-container">
-	<div class="normal preload" data-source="img/btn_left.png"></div>
-	<div class="hover preload" data-source="img/btn_left_hover.png"></div>
-</div>
-
-<div class="btn-right btn-container">
-	<div class="normal preload" data-source="img/btn_right.png"></div>
-	<div class="hover preload" data-source="img/btn_right_hover.png"></div>
-</div>
 
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -162,6 +166,7 @@
 		
 		TweenMax.set(".title-love img", {scale:4, autoAlpha:0});
 		TweenMax.set(".tip-love img", {autoAlpha:0});
+		TweenMax.to(".main-container", 2, {alpha:1});
 	}
 
 	function initSlider(){
